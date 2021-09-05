@@ -1,0 +1,60 @@
+@use '../ulti' as *;
+.hero {
+  position: relative;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 rem(10);
+    margin: 0 rem(10);
+    border-radius: rem(20);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+    @include breakpoint(medium) {
+      padding: rem(50);
+      border-radius: rem(20);
+    }
+
+    h1 {
+      font-size: rem(70);
+      color: darkblue;
+
+      span {
+        color: cadetblue;
+      }
+    }
+    h3 {
+      font-size: rem(40);
+    }
+  }
+}
+
+.download {
+  align-self: flex-end;
+  margin: rem(15);
+  &__link {
+    padding: rem(15);
+    color: rgb(8, 249, 253);
+    background-color: rebeccapurple;
+    border-radius: rem(15);
+  }
+}
+
+.arrow-box {
+  position: absolute;
+  bottom: rem(30);
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+
+  i {
+    font-size: rem(30);
+  }
+}
