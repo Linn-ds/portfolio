@@ -1,5 +1,6 @@
+@use '../ulti' as *;
 .container {
-  max-width: 1240px;
+  max-width: rem(1240);
   margin: 0 auto;
 }
 
@@ -12,4 +13,10 @@
 
 .width-100 {
   width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: rem(40);
+  margin-bottom: rem(50);
 }
