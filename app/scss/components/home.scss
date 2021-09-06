@@ -1,18 +1,23 @@
 @use '../ulti' as *;
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(255, 255, 255, 0);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: rem(60);
+
+  @include breakpoint(medium) {
+    padding-bottom: 0;
+  }
 
   &__text-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: rem(50) rem(10);
+    padding: rem(50) rem(10) rem(15);
     margin: 0 rem(10);
     border-radius: rem(20);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -22,8 +27,13 @@
     }
 
     h1 {
-      font-size: rem(70);
+      font-size: rem(54);
       color: darkblue;
+      line-height: 1;
+
+      @include breakpoint(medium) {
+        font-size: rem(70);
+      }
 
       span {
         color: cadetblue;
@@ -36,8 +46,11 @@
 }
 
 .download {
-  align-self: flex-end;
   margin: rem(15);
+  align-self: center;
+  @include breakpoint(medium) {
+    align-self: flex-end;
+  }
   &__link {
     padding: rem(15);
     color: rgb(8, 249, 253);
@@ -48,10 +61,14 @@
 
 .arrow-box {
   position: absolute;
-  bottom: rem(30);
+  bottom: rem(0);
   left: 50%;
   transform: translate(-50%);
   text-align: center;
+
+  @include breakpoint(medium) {
+    bottom: rem(50);
+  }
 
   i {
     font-size: rem(30);

@@ -4,6 +4,7 @@
   top: 0;
   padding: 1.25rem 0;
   z-index: 100;
+  height: 8vh;
   background-color: rgba(255, 255, 255, 0.726);
 }
 @media (min-width: 40em) {
@@ -70,7 +71,7 @@
 .nav__item {
   width: 100%;
   text-align: center;
-  margin-bottom: 3.125rem;
+  margin-bottom: 1.25rem;
   transform: translateX(100vw);
   transition: all 0.4s ease-in-out;
 }
@@ -179,18 +180,24 @@
 
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(255, 255, 255, 0);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3.75rem;
+}
+@media (min-width: 40em) {
+  .hero {
+    padding-bottom: 0;
+  }
 }
 .hero__text-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 3.125rem 0.625rem;
+  padding: 3.125rem 0.625rem 0.9375rem;
   margin: 0 0.625rem;
   border-radius: 1.25rem;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -201,8 +208,14 @@
   }
 }
 .hero__text-box h1 {
-  font-size: 4.375rem;
+  font-size: 3.375rem;
   color: darkblue;
+  line-height: 1;
+}
+@media (min-width: 40em) {
+  .hero__text-box h1 {
+    font-size: 4.375rem;
+  }
 }
 .hero__text-box h1 span {
   color: cadetblue;
@@ -212,8 +225,13 @@
 }
 
 .download {
-  align-self: flex-end;
   margin: 0.9375rem;
+  align-self: center;
+}
+@media (min-width: 40em) {
+  .download {
+    align-self: flex-end;
+  }
 }
 .download__link {
   padding: 0.9375rem;
@@ -224,10 +242,15 @@
 
 .arrow-box {
   position: absolute;
-  bottom: 1.875rem;
+  bottom: 0rem;
   left: 50%;
   transform: translate(-50%);
   text-align: center;
+}
+@media (min-width: 40em) {
+  .arrow-box {
+    bottom: 3.125rem;
+  }
 }
 .arrow-box i {
   font-size: 1.875rem;
@@ -321,11 +344,17 @@ body {
   margin: 0 auto;
 }
 
-.flex-row {
+.flex-row-column {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media (min-width: 40em) {
+  .flex-row-column {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .width-100 {

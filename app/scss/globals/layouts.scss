@@ -4,11 +4,16 @@
   margin: 0 auto;
 }
 
-.flex-row {
+.flex-row-column {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: rem(20);
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .width-100 {
