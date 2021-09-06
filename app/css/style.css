@@ -196,7 +196,6 @@
 @media (min-width: 40em) {
   .hero__text-box {
     padding: 3.125rem;
-    border-radius: 1.25rem;
   }
 }
 .hero__text-box h1 {
@@ -248,18 +247,57 @@
   flex-direction: column;
   align-items: center;
   gap: 3.125rem;
+  border-radius: 1.25rem;
+  margin: 0 0.625rem;
+  padding: 3.125rem 0.625rem;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 @media (min-width: 40em) {
   .about__box {
     flex-direction: row;
-    justify-content: space-evenly;
+    gap: 6.25rem;
     align-items: center;
+    padding: 3.125rem;
   }
 }
-.about__box--img img {
+.about__box--left {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.about__box--left img {
   width: 18.75rem;
   height: 18.75rem;
   line-height: 0;
+}
+.about__box--text .text-container {
+  padding: 1.25rem;
+}
+.about__box--text .text-container p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.about__box--text .text-container p span {
+  color: darkmagenta;
+  font-weight: bold;
+}
+.about__box--text .text-container h3 span {
+  color: yellow;
+  font-weight: bold;
+}
+.about__skills {
+  font-size: 1.5625rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.about__skills--container {
+  display: flex;
+  flex-direction: row;
+  gap: 3.125rem;
+  padding: 1.25rem;
+}
+.about__skills--skills {
+  margin-left: 1.25rem;
 }
 
 * {
@@ -296,6 +334,10 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3.125rem;
+}
+
+.yellow {
+  color: yellow;
 }
 
 body {

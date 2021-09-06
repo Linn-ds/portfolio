@@ -14,19 +14,66 @@
     flex-direction: column;
     align-items: center;
     gap: rem(50);
+    border-radius: rem(20);
+    margin: 0 rem(10);
+    padding: rem(50) rem(10);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 
     @include breakpoint(medium) {
       flex-direction: row;
-      justify-content: space-evenly;
+      // justify-content: space-evenly;
+      gap: rem(100);
       align-items: center;
+      padding: rem(50);
     }
 
-    &--img {
+    &--left {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       img {
         width: rem(300);
         height: rem(300);
+        // border-radius: 70%;
         line-height: 0;
       }
+    }
+
+    &--text {
+      .text-container {
+        padding: rem(20);
+        p {
+          font-size: rem(18);
+          line-height: 1.5;
+
+          span {
+            color: darkmagenta;
+            font-weight: bold;
+          }
+        }
+        h3 {
+          span {
+            color: yellow;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  &__skills {
+    font-size: rem(25);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: rem(20);
+
+    &--container {
+      display: flex;
+      flex-direction: row;
+      gap: rem(50);
+      padding: rem(20);
+    }
+
+    &--skills {
+      margin-left: rem(20);
     }
   }
 }
