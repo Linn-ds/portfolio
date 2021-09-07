@@ -56,6 +56,12 @@
     color: rgb(8, 249, 253);
     background-color: rebeccapurple;
     border-radius: rem(15);
+    @include transition-ease;
+
+    &:hover {
+      background-color: #4285f4;
+      color: #db4437;
+    }
   }
 }
 

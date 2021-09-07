@@ -23,9 +23,22 @@
 .title {
   text-align: center;
   font-size: rem(40);
-  margin-bottom: rem(10);
+  margin: rem(10) 0;
 }
 
 .yellow {
   color: yellow;
+}
+
+.underline {
+  border-bottom: 1px sold #4285f4;
+}
+.link {
+  color: #4285f4;
+
+  @include transition-ease;
+
+  &:hover {
+    color: black;
+  }
 }
